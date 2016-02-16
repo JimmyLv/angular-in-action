@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>$scope vs scope</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" type="text/css" href="./app.css">
+</head>
+<body ng-app="app">
+    <div ng-controller="TestCtrl">
+        <div>in controller: {{fname}}</div>
+        ng-model: <input ng-model="fname">
+        <div>------------</div>
+        just say <button ng-click="sayHi()">Hi</button> to {{fname}}
+        <div>{{name4}}</div>
+        <div>------------</div>
+        <test-directive name='jinglv' fname2='fname'></test-directive>
+        <div>------------</div>
+        <simple-directive></simple-directive>
+    </div>
+</body>
+</html>
