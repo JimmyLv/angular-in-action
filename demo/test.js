@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('TestCtrl', function($rootScope, $scope) {
-      $scope.fname = 'jinglv';
+  .controller('TestCtrl', function() {
+      this.fname = 'jinglv';
   });

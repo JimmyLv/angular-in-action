@@ -10,33 +10,21 @@
 <body ng-app="app">
     <div ng-controller="MainCtrl">
         <div class="demo-box">
-            <div>in controller: {{fname}}</div>
+            <div>in controller: {{ fname }}</div>
+            <div>ng-model: <input ng-model="fname"></div>
+            just say <button ng-click="sayHi()">Hi</button> to {{fname}}
+
+            <div ng-controller="TestCtrl as test">{{ test.fname }}/{{$parent.fname}}</div>
+
+            <div>{{name4}}</div>
+
+            <div>------simple-directive------</div>
+            <simple-directive></simple-directive>
+
+            <div>------test-directive------</div>
+            <test-directive name='jinglv' fname2='fname'></test-directive>
+
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div ng-controller="TestCtrl">{{fname}}/{{$parent.fname}}</div>
-        <div>ng-model: <input ng-model="fname"></div>
-        just say <button ng-click="sayHi()">Hi</button> to {{fname}}
-        <div>{{name4}}</div>
-        <div>------test-directive------</div>
-        <test-directive name='jinglv' fname2='fname'></test-directive>
-        <div>------simple-directive------</div>
-        <simple-directive></simple-directive>
     </div>
 </body>
 </html>
