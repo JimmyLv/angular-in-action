@@ -47,4 +47,3 @@ angular.module('app', [])
 			template: 'in simple Directive: {{name4}}'
 		}
 	});
-angular.module('app');
