@@ -41,11 +41,13 @@ angular.module('app', [])
     return {
       scope: true,
       controller: function ($scope) {
-        $scope.name4 = 'name4 (inside another simple directive which shared scpoe with outside controller.)';
-        $scope.fname = 'lin';
+        this.name4 = 'name4 (inside another simple directive which shared scpoe with outside controller.)';
+        this.fname = 'lin';
         console.log('4. scope in controller inside simple directive:', $scope);
         console.log('simple directive: ', $scope, $scope.$parent, $scope.$parent.$parent);
+        console.log('$scope: ', $scope, $scope.$parent, $scope.$parent.$parent);
       },
+      controllerAs: 'vm',
       template: ['<div>in simple Directive: {{name4}}</div>',
         '<button ng-click="sayHi()">using parent sayHi() inside child scope!</button>'
       ].join('')
